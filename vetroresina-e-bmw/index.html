@@ -315,6 +315,13 @@ window.addEventListener("resize",u);window.addEventListener("orientationchange",
 :where(#oc-home) .gal.prod .gitem:hover .ph{ border-color:var(--ink); }
 
 :where(#oc-home) .gal.prod .gitem.larga{ grid-column:span 2; }
+:where(#oc-home) .gal .gitem.larga{ grid-column:span 2; }
+/* La tessera larga occupa 2 colonne + il divario di 18px: a 2:1 verrebbe 9px
+   piu' alta della tessera quadrata accanto. Il riempimento percentuale si
+   calcola sulla larghezza PROPRIA, quindi 50% meno meta' divario = esattamente
+   la larghezza di una colonna, e le basi si allineano a qualunque schermo. */
+:where(#oc-home) .gal .gitem.larga .ph{ height:0; padding-bottom:calc(50% - 9px); position:relative; background:#fff; }
+:where(#oc-home) .gal .gitem.larga .ph img{ position:absolute; inset:0; width:100%; height:100%; object-fit:contain; padding:6px; box-sizing:border-box; }
 :where(#oc-home) .gal.prod .gitem.larga .ph{ aspect-ratio:2/1; }
 :where(#oc-home) .gal.prod .gitem.larga .ph img{ object-fit:cover; padding:0; }
 
