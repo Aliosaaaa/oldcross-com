@@ -316,6 +316,12 @@ window.addEventListener("resize",u);window.addEventListener("orientationchange",
 
 :where(#oc-home) .gal.prod .gitem.larga{ grid-column:span 2; }
 :where(#oc-home) .gal .gitem.larga{ grid-column:span 2; }
+/* Fascia a riga intera: i tre serbatoi sono molto bassi e larghi, su due
+   colonne resterebbero minuscoli. Occupando tutta la riga ogni pezzo e'
+   largo il doppio. La proporzione segue quella della foto ritagliata. */
+:where(#oc-home) .gal .gitem.fascia{ grid-column:1 / -1; }
+:where(#oc-home) .gal .gitem.fascia .ph{ aspect-ratio:2400/424; background:#fff; }
+:where(#oc-home) .gal .gitem.fascia .ph img{ object-fit:contain; padding:4px; }
 /* La tessera larga occupa 2 colonne + il divario di 18px: a 2:1 verrebbe 9px
    piu' alta della tessera quadrata accanto. Il riempimento percentuale si
    calcola sulla larghezza PROPRIA, quindi 50% meno meta' divario = esattamente
@@ -595,7 +601,7 @@ window.addEventListener("resize",u);window.addEventListener("orientationchange",
 <figure class="gitem" tabindex="0" role="button" aria-label="Ingrandisci: TGM C81"><div class="ph"><img decoding="async" loading="lazy" src="https://oldcross.com/wp-content/uploads/2026/08/oc-img-cat-tgm-c81.jpg" alt="TGM C81"></div><figcaption>TGM C81</figcaption></figure>
 <figure class="gitem" tabindex="0" role="button" aria-label="Ingrandisci: Posteriore Villa Cr papera"><div class="ph"><img decoding="async" loading="lazy" src="https://oldcross.com/wp-content/uploads/2026/08/oc-img-cat-posteriore-villa-cr-papera.jpg" alt="Posteriore Villa Cr papera"></div><figcaption>Posteriore Villa Cr papera</figcaption></figure>
 <figure class="gitem" tabindex="0" role="button" aria-label="Ingrandisci: A-223-B retro"><div class="ph"><img decoding="async" loading="lazy" src="https://oldcross.com/wp-content/uploads/2026/08/oc-img-cat-a-223-b-retro.jpg" alt="A-223-B retro"></div><figcaption>A-223-B retro</figcaption></figure>
-<figure class="gitem larga" tabindex="0" role="button" aria-label="Ingrandisci: Serbatoio TGM - gusci e finito"><div class="ph"><img decoding="async" loading="lazy" src="https://oldcross.com/wp-content/uploads/2026/08/oc-img-cat-serbatoio-tgm-gusci-e-finito.jpg" alt="Serbatoio TGM - gusci e finito"></div><figcaption>Serbatoio TGM - gusci e finito</figcaption></figure></div>
+<figure class="gitem fascia" tabindex="0" role="button" aria-label="Ingrandisci: Serbatoio TGM - gusci e finito"><div class="ph"><img decoding="async" loading="lazy" src="https://oldcross.com/wp-content/uploads/2026/08/oc-img-cat-serbatoi-tgm-418bce6a.jpg" alt="Serbatoio TGM - gusci e finito"></div><figcaption>Serbatoio TGM - gusci e finito</figcaption></figure></div>
 </div></section></div>
 
 
